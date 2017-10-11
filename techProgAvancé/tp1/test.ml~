@@ -1,0 +1,9 @@
+let square x = x*x;;
+square 3;;
+let f2 x = 3.0*.(cos(x))**2.0+.1.0;;
+
+let valabs x = 
+  if x<0 then -x else x;;
+
+
+let paire x = (function x -> float + function -x -> float)/2;;
