@@ -3,9 +3,6 @@ using Gtk;
 
 public class GtkHelloWorld {
 
-  public delegate void click (object obj, EventArgs args);
-
-
   static void onClick (object obj, EventArgs args) {
     Console.WriteLine("I have been clicked by a {0}", obj); }
 
@@ -19,8 +16,9 @@ public class GtkHelloWorld {
     myWin.Add(myBox);
 
     // Set up a button object.
+
     Button hello = new Button ("Hello");
-    hello.Clicked += new EventHandler(onClick);
+    hello.Clicked += new EventHandler((obj, args) => Console.WriteLine("I have been clicked by a {0}", obj));
     myBox.Add(hello);
 
     //Show Everything
