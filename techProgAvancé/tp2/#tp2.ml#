@@ -1,0 +1,27 @@
+(* Exercice 1 *)
+
+
+(* 1) *)
+let pi = 3.1415;;
+let rot_gen pi (x,y,ang) = 
+  let newx = x*.cos(ang*.pi) +. y*.sin(ang*.pi) in
+  let newy = x*.sin(ang*.pi) -. y*.cos(ang*.pi) in (newx,newy);;
+let rot = (rot_gen pi);;
+let pi = "troispointquatorze";;
+rot (1.,0.,1.);;
+ 
+  (* le resultat est bon car le résultat de rot_gen avec le parametre pi = 3.1415 c'est retrouver capturer dans rot *)
+
+(* 2) *)
+
+let i = 0;;
+let f j = i+j;;
+
+f(1);;
+f(2);;
+let i=421;;    
+f(2);;
+
+  (* On ne pêut pas réelement réafecter une valeur en Ocaml. Il est dont impossible de réalisé le meme programme en respectant la sémentique du langage et en sans modifier les évaluation qui lui corresponde*)
+
+  
